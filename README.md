@@ -1,4 +1,4 @@
-# ConfigBinder-ad4cc7
+# ConfigBinder-c8ba5b
 
 A Java ConfigBinder utility.
 
